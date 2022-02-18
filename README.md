@@ -2,7 +2,7 @@
 
 A simple WordPress plugin that outputs a scroll-to-top button on all pages.
 
-<p><img src="https://raw.githubusercontent.com/qriouslad/elegant-scroll-top/main/public/screenshots/settings.png" alt="Settings page preview" style=""></p>
+<p><img src="https://raw.githubusercontent.com/qriouslad/elegant-scroll-top/main/public/screenshots/settings.jpg" alt="Settings page preview" style=""></p>
 
 <p><img src="https://raw.githubusercontent.com/qriouslad/elegant-scroll-top/main/public/screenshots/frontend.jpg" alt="Frontend preview" style=""></p>
 
