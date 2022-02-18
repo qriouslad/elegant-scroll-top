@@ -96,7 +96,47 @@ class Elegant_Scroll_Top_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/elegant-scroll-top-public.js', array( 'jquery' ), $this->version, false );
+		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/elegant-scroll-top-public.js', array( 'jquery' ), $this->version, false );
+		
+		// Load scrollUp script if back to top button is enabled in plugin settings
+
+		$options = get_option('elegant_scroll_top');
+
+		if ( $options['status'] == 'enabled' ) {
+
+			wp_enqueue_script( $this->plugin_name.'-scrollup', plugin_dir_url( __FILE__ ) . 'js/jquery.scrollUp.min.js', array( 'jquery' ), $this->version, false );
+
+		}
+		
+	}
+
+	/**
+	 * Initialize the back to top button
+	 */
+	
+	public function elegant_scroll_top_init() {
+
+		$options = get_option('elegant_scroll_top');
+
+		if ( $options['status'] == 'enabled' ) {
+
+			echo '
+				<script>
+					jQuery(function() {
+						jQuery.scrollUp({
+								scrollDistance: 300, 	// Distance from top/bottom before showing element
+								scrollFrom: "top",		// top or bottom
+								scrollSpeed: 500,		// Speed of back to top/bottom (ms)
+								scrollTarget: "body",	// element, ID or class name
+								animation: "fade",		// fade, slide or none
+								scrollText: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-up\"><polyline points=\"18 15 12 9 6 15\"></polyline></svg>"
+
+							});
+						});
+				</script>
+			';
+
+		}		
 
 	}
 

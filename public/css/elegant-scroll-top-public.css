@@ -2,3 +2,28 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+#scrollUp {
+    background:  rgba(255,255,255,0.2);
+    bottom:  20px;
+    right:  20px;
+    padding:  4px 4px 0;
+    border:  1px solid #666;
+    border-radius:  3px;
+    transition:  0.25s;
+}
+
+#scrollUp:hover {
+    background:  rgba(255,255,255,0.4);
+    border:  1px solid #333;
+}
+
+#scrollUp svg {
+    width:  32px;
+    height:  32px;
+    stroke:  #666;
+}
+
+#scrollUp:hover svg {
+    stroke:  #333;
+}

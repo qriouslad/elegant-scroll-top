@@ -115,6 +115,7 @@ class Elegant_Scroll_Top_Admin {
 		// Define where and how the settings page should show up
 
 		$settings->set_capability('manage_options');
+		$settings->set_option_name('elegant_scroll_top');
 		$settings->set_menu_position(7);
 		$settings->set_menu_parent_slug('options-general.php');
 
@@ -127,11 +128,11 @@ class Elegant_Scroll_Top_Admin {
 		]);
 
 		$section->add_option('select',[
-			'name' => 'est_enable',
+			'name' => 'status',
 			'label' => __( 'Enable', '' ),
 			'options' => [
-				true => 'Yes',
-				false => 'No'
+				'disabled' => 'No',
+				'enabled' => 'Yes'
 			]
 		]);
 
