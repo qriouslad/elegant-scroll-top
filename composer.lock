@@ -1,0 +1,71 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0061e08d293b8cd2bd44d504b8c2ed46",
+    "packages": [
+        {
+            "name": "jeffreyvanrossum/wp-settings",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeffreyvr/wp-settings.git",
+                "reference": "7f1d6ea46b5455f18b000f31dbb75ca3e3cfaab7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeffreyvr/wp-settings/zipball/7f1d6ea46b5455f18b000f31dbb75ca3e3cfaab7",
+                "reference": "7f1d6ea46b5455f18b000f31dbb75ca3e3cfaab7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "phpcompatibility/php-compatibility": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Jeffreyvr\\WPSettings\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey van Rossum",
+                    "email": "jeffrey@vanrossum.dev"
+                }
+            ],
+            "description": "Handy wrapper to make creating WordPress settings pages a breeze.",
+            "support": {
+                "issues": "https://github.com/jeffreyvr/wp-settings/issues",
+                "source": "https://github.com/jeffreyvr/wp-settings/tree/1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://vanrossum.dev/donate",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-08-13T09:53:10+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
