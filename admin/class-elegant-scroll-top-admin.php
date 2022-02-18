@@ -1,5 +1,7 @@
 <?php
 
+use Jeffreyvr\WPSettings\WPSettings;
+
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -97,6 +99,51 @@ class Elegant_Scroll_Top_Admin {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/elegant-scroll-top-admin.js', array( 'jquery' ), $this->version, false );
+
+	}
+
+	/**
+	 *  Create settings page
+	 *
+	 * @since 1.0.0
+	 */
+	
+	public function add_settings() {
+
+		$settings = new WPSettings(__('Elegant Scroll Top'));
+
+		// Define where and how the settings page should show up
+
+		$settings->set_capability('manage_options');
+		$settings->set_menu_position(7);
+		$settings->set_menu_parent_slug('options-general.php');
+
+		// Basic tab
+
+		$tab = $settings->add_tab(__('Basic'));
+
+		$section = $tab->add_section(__('Get started'), [
+			'description' => __('Pick basic options to get your elegant scroll to top button working immediately'),
+		]);
+
+		$section->add_option('select',[
+			'name' => 'est_enable',
+			'label' => __( 'Enable', '' ),
+			'options' => [
+				true => 'Yes',
+				false => 'No'
+			]
+		]);
+
+		// Advanced tab
+
+		$tab = $settings->add_tab(__('Advanced'));
+
+		$section = $tab->add_section(__('Customize'), [
+			'description' => __('Customize the following options to get the button that is just right for you'),
+		]);
+
+		$settings->make();
 
 	}
 
